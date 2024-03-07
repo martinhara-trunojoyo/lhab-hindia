@@ -4,11 +4,11 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #0A2647; /* Warna latar belakang */
+    color: #ffffff; /* Warna teks */
 }
 
 header {
-    background-color: #0A2647;
-    color: #ffffff;
     padding: 1rem;
     text-align: center;
     font-family: 'Lucida Bright';
@@ -28,8 +28,9 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #ffffff;    padding: 10px;
+    padding: 10px;
     display: block;
+    color: #ffffff; /* Warna teks tautan */
 }
 
 nav .dropdown {
@@ -39,7 +40,7 @@ nav .dropdown {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #0A2647;
+    background-color: #0A2647; /* Warna latar belakang dropdown */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
@@ -55,38 +56,6 @@ nav .dropdown {
     display:block;
 }
 
-.wtt {
-    background-color: #144272;
-    border: 1px solid #050202;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
-
-.wtt h2 {
-    color: #ffff;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-}
-
-.wtt p {
-    margin-top: 60px;
-
-    text-align: justify;
-    font-family: 'Times New Roman', Times, serif;
-    color: #ffffff;
-}
-
-.wtt footer {
-    
-    margin-top: 10px;
-}
-
-.wtt footer small {
-    color: #777;
-}
-
 main {
     flex: 1;
     padding: 20px;
@@ -99,26 +68,57 @@ main {
     height: 40vh;
 }
 
-
-
-article {
+.wtt {
+    background-color: #144272; /* Warna latar belakang artikel */
+    border: 1px solid #050202;
+    padding: 20px;
     margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.wtt h2 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.wtt p {
+    margin-top: 20px;
+    text-align: justify;
 }
 
 footer {
-    background-color: #205295;
-    color: #fff;
     padding: 1rem;
     text-align: center;
+    background-color: #205295; /* Warna latar belakang footer */
 }
 
 aside {
-    flex-basis: 300px;
     padding: 20px;
+    text-align: center;
 }
 
 aside img {
     max-width: 50%;
-    border-radius: 30%;
+    border-radius: 50%;
     margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    overflow: hidden; /* Menyembunyikan gambar yang keluar dari batasnya */
+}
+
+.image-container img {
+    max-width: 100%; /* Mengatur lebar gambar agar tetap dalam batas container */
+    max-height: 100%; /* Mengatur tinggi gambar agar tetap dalam batas container */
 }
